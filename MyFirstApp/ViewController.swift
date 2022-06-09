@@ -15,10 +15,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
+    var isOpen = false
     @IBAction func changeButtonClicked(_ sender: Any) {
         
-        imageView.image = UIImage(named: "metallica2")
+        
+        isOpen = !isOpen
+        if isOpen
+        {
+            imageView.image = UIImage(named: "metallica2")
+        }
+        else
+        {
+            imageView.image = UIImage(named: "metallica")
+        }
     }
     
 }
